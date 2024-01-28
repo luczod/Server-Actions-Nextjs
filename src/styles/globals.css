@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #000;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  width: 37.5rem;
+  background-size: contain; /* width, height */
+  background-position: center right;
+}
+
+input:checked + label .description {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.red-gradient {
+  background: linear-gradient(92deg, #ff5956 2.87%, #ee1e38 96.18%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card {
+  width: 5rem;
+  border-radius: 0.75rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  /* transition: 1s cubic-bezier(0.28, -0.03, 0, 0.99); */
+  box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.8);
+}
+
+.description {
+  @apply flex justify-center flex-col overflow-hidden h-fit opacity-0 translate-x-[30px] delay-[0.3s] transition-all duration-[0.3s] ease-[ease];
+}
