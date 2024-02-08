@@ -23,7 +23,7 @@ function AnimeCard({ anime, index }: Prop) {
       className="max-w-sm rounded relative w-full"
     >
       <div className="max-w-sm rounded relative w-full">
-        <div className="relative w-full h-[37vh]">
+        <div className="relative h-[45svh] w-4/5 mx-auto lg:w-full lg:mx-0 lg:h-[37vh]">
           <Image
             src={`https://shikimori.one/${anime.image.original}`}
             alt={anime.name}

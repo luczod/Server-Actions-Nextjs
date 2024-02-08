@@ -12,7 +12,9 @@ async function Home() {
       <Hero />
       <div className="sm:p-16 py-16 px-8 flex flex-col gap-10">
         <h2 className="text-3xl text-white font-bold">Top Ranking</h2>
-        <section className="flex flex-nowrap h-96 justify-start">{dataTop}</section>
+        <section className="flex flex-col gap-2 lg:gap-0 lg:flex-row lg:flex-nowrap lg:h-96 lg:justify-start">
+          {dataTop}
+        </section>
         <h2 className="text-3xl text-white font-bold">Popular Anime</h2>
         <section className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
           {data}
