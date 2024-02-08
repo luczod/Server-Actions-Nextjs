@@ -4,8 +4,12 @@ export function SkeletonCard() {
     <section className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
       {loadingCard.map((e) => {
         return (
-          <div key={e} role="status" className="max-w-sm relative w-[16rem] animate-pulse">
-            <div className="flex items-center justify-center relative w-full h-[37vh] rounded-xl bg-gray-700">
+          <div
+            key={e}
+            role="status"
+            className="max-w-sm relative w-full md:w-[16rem] animate-pulse"
+          >
+            <div className="flex items-center justify-center relative h-[45svh] w-4/5 mx-auto md:w-full md:mx-0 md:h-[37vh] rounded-xl bg-gray-700">
               <svg
                 className="w-10 h-10 text-gray-600"
                 aria-hidden="true"
