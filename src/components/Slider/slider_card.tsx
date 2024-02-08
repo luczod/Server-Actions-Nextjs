@@ -18,10 +18,10 @@ export function SliderCard({ anime, index }: IProps) {
           backgroundImage: `url(https://shikimori.one/${anime.image.original})`,
         }}
       >
-        <div className="flex flex-col justify-between w-1/2">
+        <div className="flex flex-col justify-between w-fit md:w-1/2">
           {/* description */}
-          <div className="description pl-4 pb-12 gap-2 text-white">
-            <div className="flex justify-between   items-center gap-1">
+          <div className="description max-sm:p-2 lg:pl-4 lg:pb-12 gap-2 text-white">
+            <div className="flex justify-between items-center gap-1">
               <h2 className="font-bold  text-xl line-clamp-1 w-full">{anime.name}</h2>
               <div className="py-1 px-2 bg-[#161921] rounded-sm">
                 <p className="text-sm font-bold capitalize">{anime.kind}</p>
@@ -56,8 +56,11 @@ export function SliderCard({ anime, index }: IProps) {
               magnam quidem.
             </p>
           </div>
-
-          <div className="flex justify-center items-center m-4 rounded-full text-white w-12 h-12 bg-[#161921] ">
+          {/* Position */}
+          <div
+            id="ranking"
+            className="flex justify-center items-center m-4 md:m-2 rounded-full text-white w-12 h-12 bg-[#161921]"
+          >
             {index + 1}
           </div>
         </div>
