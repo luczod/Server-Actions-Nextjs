@@ -1,7 +1,6 @@
 'use client';
 
 import { fetchAnime } from '@/app/actions/explore';
-import Image from 'next/image';
 import { ReactNode, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { SkeletonCard } from './Skeleton';

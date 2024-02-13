@@ -5,18 +5,24 @@ import { AnimeProp } from '@/types';
 interface Prop {
   anime: AnimeProp;
   index: number;
+  page?: number;
 }
 
 const variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
 };
+let count = 0;
+function AnimeCard({ anime, index, page }: Prop) {
+  if (page === 1 && index === 0) {
+    count = 0;
+  }
+  count++;
 
-function AnimeCard({ anime, index }: Prop) {
   return (
     <MotionDiv
       variants={variants}
-      initial="hidden"
+      initial={false}
       animate="visible"
       transition={{ delay: index * 0.25, ease: 'easeInOut', duration: 0.5 }}
       viewport={{ amount: 0 }}
@@ -38,17 +44,17 @@ function AnimeCard({ anime, index }: Prop) {
               <p className="text-white text-sm font-bold capitalize">{anime.kind}</p>
             </div>
           </div>
-          <div className="flex gap-4 items-center">
-            {/*   <div className="flex flex-row gap-2 items-center">
+          <div className="flex gap-4">
+            <div className="flex flex-row items-baseline gap-2">
               <Image
                 src="./svg/ranking.svg"
                 alt="ranking"
-                width={18}
-                height={18}
+                width={16}
+                height={16}
                 className="object-contain"
               />
-              <p className="text-base font-bold text-white">{index + 1}</p>
-            </div> */}
+              <p className="text-base  font-bold text-white">{count}</p>
+            </div>
             <div className="flex flex-row gap-2 items-center">
               <Image
                 src="./svg/episodes.svg"
